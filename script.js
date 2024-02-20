@@ -5,9 +5,9 @@ const starterData = document.querySelector(".starterData");
 
 
 startNewGame.addEventListener('click', () => {
+    const firstPlayer = document.getElementById('player1').value;
+    const secondPlayer = document.getElementById('player2').value;
     function changeGame() {
-        const firstPlayer = document.getElementById('player1').value;
-        const secondPlayer = document.getElementById('player2').value;
         const startNewGame = document.getElementById('startNewGame');
         let result = document.getElementById('result');
         let game = document.querySelector(".game");
@@ -49,13 +49,18 @@ startNewGame.addEventListener('click', () => {
             })
         });
         
-        reset.addEventListener('click', () => {
+        function resetGame() {
             boxes.forEach(box => {
                 box.innerHTML = "";
                 box.disabled = false;
                 turn = true;
                 document.getElementById('result').innerText = `Result will display here.`;
             });
+        }
+
+
+        reset.addEventListener('click', () => {
+            resetGame();
         })
         const checkWinner = () => {
             for (const pattern of winPatterns) {
@@ -66,8 +71,16 @@ startNewGame.addEventListener('click', () => {
                     if (value1 === value2 && value2 === value3) {
                         if (value1 == "O") {
                             value1 = firstPlayer;
+                            setTimeout(() => {
+                                // document.getElementById('result').innerText = `New game is starting in 3 seconds.`;
+                                setTimeout(resetGame, 2000);
+                            }, 1000);
                         } else {
                             value1 = secondPlayer;
+                            setTimeout(() => {
+                                // document.getElementById('result').innerText = `New game is starting in 3 seconds.`;
+                                setTimeout(resetGame, 2000);
+                            }, 1000);
                         }
                         document.getElementById('result').innerText = `${value1} is the winner.🥳`;
                     }
@@ -79,8 +92,13 @@ startNewGame.addEventListener('click', () => {
         }
     }
 
+    if (firstPlayer!="" && secondPlayer!="") {
+        changeGame()
+    } else {
+        alert(`Please enter valid names.`)        
+    }
 
-    changeGame()
+
 
 })
 
