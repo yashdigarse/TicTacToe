@@ -73,13 +73,13 @@ startNewGame.addEventListener('click', () => {
                             value1 = firstPlayer;
                             setTimeout(() => {
                                 // document.getElementById('result').innerText = `New game is starting in 3 seconds.`;
-                                setTimeout(resetGame, 2000);
+                                setTimeout(resetGame, 1000);
                             }, 1000);
                         } else {
                             value1 = secondPlayer;
                             setTimeout(() => {
                                 // document.getElementById('result').innerText = `New game is starting in 3 seconds.`;
-                                setTimeout(resetGame, 2000);
+                                setTimeout(resetGame, 1000);
                             }, 1000);
                         }
                         document.getElementById('result').innerText = `${value1} is the winner.🥳`;
