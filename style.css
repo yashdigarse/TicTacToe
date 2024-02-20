@@ -1,0 +1,76 @@
+body{
+    background-color: #BED1CF;
+    transition: background-color 3s ease;
+
+}
+.container{
+    background-color: rgba(219, 211, 216, .5);
+    height: 500px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gameName{
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+    font-size: xx-large;
+}
+
+.game{
+    background-color: rgba(219, 211, 216, );
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    border-radius: 20px;
+}
+.result{
+    font-size: x-large;
+}
+.reset{
+    border-style: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    background-color: #223843;
+    color: white;
+}
+.box{
+    height: 100px;
+    width: 100px;
+    border-style: none;
+    border-radius: 20px;
+    background-color: rgba(34, 56, 67,.2);
+    color: white;
+    font-size: xx-large;
+}
+.starterData{
+    width: 400px;
+    /* background-color: #223843; */
+    /* position: absolute; */
+    text-align: center;
+}
+#player1, #player2, #startNewGame{
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+#startNewGame{
+    background-color: #223843;
+    color: white;
+}
+
+.display{
+    display: none;
+}
