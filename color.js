@@ -7,8 +7,9 @@ function colorChange(){setInterval(() => {
         hex+= characters[Math.floor(Math.random()*16)];
     }
     body.style.backgroundColor=hex;
+    document.querySelector(".hex").innerHTML=`Current color code is <b>${hex}</b>`
     
-}, 2000);
+}, 3000);
 }
 
 

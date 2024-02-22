@@ -1,6 +1,6 @@
 body{
     background-color: #BED1CF;
-    transition: background-color 3s ease;
+    transition: background-color 2s ease;
 
 }
 .container{
@@ -73,4 +73,14 @@ body{
 
 .display{
     display: none;
+}
+
+.hexContainer{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color:rgba(219, 211, 216, .5);
+    border-top-left-radius: 20px;
+    padding: 10px;
+    padding-right: 20px;
 }

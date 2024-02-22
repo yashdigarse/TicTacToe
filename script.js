@@ -13,16 +13,16 @@ startNewGame.addEventListener('click', () => {
         let game = document.querySelector(".game");
         let boxes = document.querySelectorAll(".box");
         let reset = document.getElementById("reset");
-        
+
         starterData.classList.add('display');
         result.classList.remove('display');
         reset.classList.remove('display');
         game.classList.remove('display');
-        
+
         // alert(firstPlayer+secondPlayer)
-        
+
         let turn = true;
-        
+
         const winPatterns = [
             [0, 1, 2],
             [0, 3, 6],
@@ -32,23 +32,23 @@ startNewGame.addEventListener('click', () => {
             [2, 4, 6],
             [3, 4, 5],
             [6, 7, 8]];
-        
+
         boxes.forEach(box => {
             box.addEventListener('click', () => {
                 if (turn) {
                     box.innerHTML = "O";
                     turn = false;
-        
+
                 } else {
                     box.innerHTML = "X";
                     turn = true;
-        
+
                 }
                 box.disabled = true;
                 checkWinner();
             })
         });
-        
+
         function resetGame() {
             boxes.forEach(box => {
                 box.innerHTML = "";
@@ -73,29 +73,29 @@ startNewGame.addEventListener('click', () => {
                             value1 = firstPlayer;
                             setTimeout(() => {
                                 // document.getElementById('result').innerText = `New game is starting in 3 seconds.`;
-                                setTimeout(resetGame, 1000);
+                                setTimeout(resetGame, 2000);
                             }, 1000);
-                        } else {
+                        } else {  
                             value1 = secondPlayer;
                             setTimeout(() => {
                                 // document.getElementById('result').innerText = `New game is starting in 3 seconds.`;
-                                setTimeout(resetGame, 1000);
+                                setTimeout(resetGame, 2000);
                             }, 1000);
                         }
                         document.getElementById('result').innerText = `${value1} is the winner.🥳`;
                     }
-        
+
                 }
-        
+
             }
-        
+
         }
     }
 
-    if (firstPlayer!="" && secondPlayer!="") {
+    if (firstPlayer != "" && secondPlayer != "") {
         changeGame()
     } else {
-        alert(`Please enter valid names.`)        
+        alert(`Please enter valid names.`)
     }
 
 
