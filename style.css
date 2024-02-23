@@ -16,6 +16,7 @@ body{
     justify-content: center;
 }
 .gameName{
+    padding-bottom: 20px;
     margin: 0 auto;
     width: 400px;
     text-align: center;
